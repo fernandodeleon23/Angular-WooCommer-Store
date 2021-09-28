@@ -1,0 +1,24 @@
+
+.navbar-brand img{
+    width:180px;
+}
+
+.options li a i{
+    margin-right:8px;
+}
+
+nav.menu-cont {
+    border-top:1px solid #ececec;
+    border-bottom:1px solid #ececec;
+}
+nav.menu-cont li a{
+    padding: 7px 21px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight:700;
+}
+nav.menu-cont li:first-child a{
+    padding-left:0;
+}
+nav.menu-cont li.active a, nav.menu-cont li:hover a{
+    color:#3BB77E;
+}

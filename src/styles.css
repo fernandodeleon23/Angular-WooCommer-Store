@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+
+body{
+    font-family: 'Lato', sans-serif;
+    color:#7E7E7E;
+    font-size: 14px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+a{
+    color:#7E7E7E;
+}
+
+.padding-10{
+    padding:10px 0px;
+}
+.padding-20{
+    padding:20px 0px;
+}
+.padding-30{
+    padding:30px 0px;
+}
+.padding-40{
+    padding:40px 0px;
+}
+
+.section-title-area{
+    font-family: "Quicksand", sans-serif;
+}
+.section-title{
+    color: #253D4E;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.section-title-area .description{
+    font-size:1.2em;
+    font-weight: 700;
+}
