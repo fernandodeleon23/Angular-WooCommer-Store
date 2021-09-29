@@ -1,9 +1,31 @@
 
-<section class="single-category padding-40">
+<section class="single-category padding-50">
     <div class="container">
 
-        <div class="section-title-area">
+        <div class="section-title-area mb-5">
             <h1 class="section-title">Category</h1>
+            <p [hidden]="!loading" class="description mt-3 loading">Cargando productos...</p>
+        </div>
+
+        <div class="products-loop">
+            <article *ngFor="let product of products">
+                <div class="image-area">
+                    <a [routerLink]="['/product', product.slug]">
+                        <div class="tag">Sale</div>
+                        <img [src]="product.images[0].src" class="img-fluid" alt="">
+                    </a>
+                    <span class="category mb-2">Flower</span>
+                </div>
+                <h4 class="product-title mb-3"><a [routerLink]="['/product', product.slug]">{{ product.name }}</a></h4>
+
+                <div class="product-options">
+                    <div class="price-area" *ngIf="product.price">
+                        <span class="price mb-1">{{ product.price | currency }}</span>
+                        <span *ngIf="product.regular_price" class="old-price">${{ product.regular_price | currency }}</span>
+                    </div>
+                    <button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i> Agregar</button>
+                </div>
+            </article>
         </div>
     </div>
 </section>
