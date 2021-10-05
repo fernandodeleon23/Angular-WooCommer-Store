@@ -1,0 +1,8 @@
+
+.cart-list img.product-image{
+    width:100px;
+}
+.cart-list thead .th-container, .cart-list tbody .td-container{
+    display:flex;
+    align-items:center;
+}

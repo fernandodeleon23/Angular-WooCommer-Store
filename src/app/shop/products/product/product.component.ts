@@ -11,6 +11,7 @@ export class ProductComponent implements OnInit {
 
   product: any;
   product_slug: any;
+  loading: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,6 +22,7 @@ export class ProductComponent implements OnInit {
     
     this._dataService.getProduct( this.product_slug ).subscribe(data=>{
       this.product = data
+      this.loading = false
     })
   }
 

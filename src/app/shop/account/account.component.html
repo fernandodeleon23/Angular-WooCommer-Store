@@ -1,0 +1,20 @@
+
+<section class="page-my-account padding-50">
+    <div class="container">
+
+        <div class="my-account-panels">
+            <div class="account-links">
+                <ul class="list-unstyled">
+                    <li><a routerLink="/cuenta/ordenes"><i class="fas fa-list"></i> Órdenes</a></li>
+                    <li><a routerLink="/cuenta/address"><i class="fas fa-address-card"></i> Mis direcciones</a></li>
+                    <li><a routerLink="/cuenta/account-details"><i class="fas fa-user"></i> Detalles de la cuenta</a></li>
+                    <li><a href="#"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+                </ul>
+            </div>
+            <div class="panel-content">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+
+    </div>
+</section>

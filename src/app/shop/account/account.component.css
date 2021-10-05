@@ -1,0 +1,25 @@
+
+.my-account-panels{
+    display:flex;
+}
+.my-account-panels .account-links{
+    width:30%;
+    font-family:"Quicksand", sans-serif;
+}
+.my-account-panels .account-links li a{
+    display:block;
+    margin-bottom:12px;
+    border-radius:10px;
+    padding:15px 30px;
+    font-weight: 700;
+    font-size: 1.21em;
+    border:1px solid #efefef;
+}
+a:hover{
+    background-color:#3BB77E;
+    color:#fff;
+}
+.my-account-panels .panel-content{
+    width:70%;
+    padding-left:40px;
+}

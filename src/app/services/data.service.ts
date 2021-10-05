@@ -17,4 +17,8 @@ export class DataService {
   getProduct( slug:string ){
     return this._http.get( this.apiUrl+'products/'+slug)
   }
+
+  getProductsByCat( slug:string ){
+    return this._http.get( this.apiUrl+'products/cat/'+slug )
+  }
 }

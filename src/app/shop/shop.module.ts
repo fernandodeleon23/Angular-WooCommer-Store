@@ -13,6 +13,9 @@ import { RegisterComponent } from './register/register.component';
 import { OrdersComponent } from './account/orders/orders.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { RouterModule } from '@angular/router';
+import { AccountComponent } from './account/account.component';
+import { MyAddressComponent } from './account/my-address/my-address.component';
+import { AccountDetailsComponent } from './account/account-details/account-details.component';
 
 
 
@@ -27,7 +30,10 @@ import { RouterModule } from '@angular/router';
     LoginComponent,
     RegisterComponent,
     OrdersComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    AccountComponent,
+    MyAddressComponent,
+    AccountDetailsComponent
   ],
   imports: [
     CommonModule,

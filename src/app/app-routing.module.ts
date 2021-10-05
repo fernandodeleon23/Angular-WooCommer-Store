@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { HomeComponent } from './pages/home/home.component';
+import { AccountDetailsComponent } from './shop/account/account-details/account-details.component';
+import { AccountComponent } from './shop/account/account.component';
+import { MyAddressComponent } from './shop/account/my-address/my-address.component';
 import { OrdersComponent } from './shop/account/orders/orders.component';
 import { BrandComponent } from './shop/brands/brand/brand.component';
 import { BrandsComponent } from './shop/brands/brands.component';
@@ -21,7 +24,19 @@ const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
 
   // Shop pages
-  { path: 'cuenta/ordenes', component: OrdersComponent },
+  {
+    path: 'cuenta', component: AccountComponent,
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'ordenes'
+      },
+      { path: 'ordenes', component: OrdersComponent },
+      { path: 'address', component: MyAddressComponent },
+      { path: 'account-details', component: AccountDetailsComponent },
+    ]
+  },
   { path: 'carrito', component: CartComponent },
 
   // Products
