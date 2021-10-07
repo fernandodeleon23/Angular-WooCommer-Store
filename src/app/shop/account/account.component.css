@@ -15,7 +15,7 @@
     font-size: 1.21em;
     border:1px solid #efefef;
 }
-a:hover{
+.my-account-panels .account-links li a:hover, .my-account-panels .account-links li.active a{
     background-color:#3BB77E;
     color:#fff;
 }

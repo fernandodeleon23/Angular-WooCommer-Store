@@ -3,8 +3,11 @@
     display:flex;
     margin-bottom:40px;
 }
-.product-cols .image-area, .product-cols .product-meta{
-    width:50%;
+.product-cols .image-area{
+    width:36%;
+}
+.product-cols .product-meta{
+    width:64%;
 }
 
 .product-cols .image-area{

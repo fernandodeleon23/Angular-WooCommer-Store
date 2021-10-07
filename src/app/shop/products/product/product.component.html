@@ -7,7 +7,7 @@
             <p [hidden]="!loading" class="loading description">Cargando producto...</p>
         </div>
 
-        <div class="product-cols" *ngIf="product">
+        <div class="product-cols mb-5" *ngIf="product">
 
             <div class="image-area">
                 <img [src]="product[0].images[0].src" class="img-fluid" alt="">
@@ -32,7 +32,7 @@
 
                 <div class="product-description mb-4" [innerHTML]="product[0].short_description"></div>
 
-                <div class="product-options">
+                <div class="product-options" *ngIf="product[0].price">
                     <input type="number" min="1" max="10" value="1" required class="form-control quantity">
                     <button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i> Agregar</button>
                 </div>
@@ -40,6 +40,33 @@
             </div>
 
         </div>
-        {{ product | json }}
+
+        <div class="related-products" *ngIf="relatedProducts">
+
+            <div class="section-title-area">
+                <h4 class="section-title mb-5">Relacionados</h4>
+            </div>
+
+            <div class="products-loop layout">
+                <article *ngFor="let relatedProduct of relatedProducts">
+                    <div class="image-area">
+                        <a (click)="goToProduct( relatedProduct.slug )">
+                            <div class="tag">Sale</div>
+                            <img [src]="relatedProduct.images[0].src" class="img-fluid" alt="">
+                        </a>
+                        <span class="category mb-2">Flower</span>
+                    </div>
+                    <h4 class="product-title mb-3"><a (click)="goToProduct( relatedProduct.slug )">{{ relatedProduct.name }}</a></h4>
+    
+                    <div class="product-options">
+                        <div class="price-area" *ngIf="relatedProduct.price">
+                            <span class="price mb-1">{{ relatedProduct.price | currency }}</span>
+                            <span *ngIf="relatedProduct.regular_price" class="old-price">${{ relatedProduct.regular_price | currency }}</span>
+                        </div>
+                        <button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i> Agregar</button>
+                    </div>
+                </article>
+            </div>
+        </div>
     </div>
 </section>

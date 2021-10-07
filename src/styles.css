@@ -52,7 +52,6 @@ a, a:hover, a:focus{
 }
 .products-loop article{
     position: relative;
-    flex:0.1 0 24.24%;
     padding:0px 15px 20px 15px;
     border: 1px solid #efefef;
     border-radius: 20px;
@@ -60,6 +59,12 @@ a, a:hover, a:focus{
     transition:all 0.2s;
     overflow:hidden;
     height:fit-content;
+}
+.products-loop.layout article{
+    flex:0.1 0 24.24%;
+}
+.products-loop.layout article a{
+    cursor:pointer;
 }
 .products-loop article:hover{
     border-color:#e1dfdf;

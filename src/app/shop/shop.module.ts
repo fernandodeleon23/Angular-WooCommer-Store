@@ -17,8 +17,6 @@ import { AccountComponent } from './account/account.component';
 import { MyAddressComponent } from './account/my-address/my-address.component';
 import { AccountDetailsComponent } from './account/account-details/account-details.component';
 
-
-
 @NgModule({
   declarations: [
     BrandsComponent,

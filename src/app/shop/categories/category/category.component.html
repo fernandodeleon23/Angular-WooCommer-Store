@@ -7,7 +7,7 @@
             <p [hidden]="!loading" class="description mt-3 loading">Cargando productos...</p>
         </div>
 
-        <div class="products-loop">
+        <div class="products-loop layout">
             <article *ngFor="let product of products">
                 <div class="image-area">
                     <a [routerLink]="['/product', product.slug]">

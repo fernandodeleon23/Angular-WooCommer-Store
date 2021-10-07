@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { FeaturedProductsComponent } from './loop/featured-products/featured-products.component';
+import { ProductsByCatComponent } from './loop/products-by-cat/products-by-cat.component';
 
 @NgModule({
   schemas: [
@@ -10,7 +11,8 @@ import { FeaturedProductsComponent } from './loop/featured-products/featured-pro
   ],
   declarations: [
     HeaderComponent,
-    FeaturedProductsComponent
+    FeaturedProductsComponent,
+    ProductsByCatComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { FeaturedProductsComponent } from './loop/featured-products/featured-pro
   ],
   exports: [
     HeaderComponent,
-    FeaturedProductsComponent
+    FeaturedProductsComponent,
+    ProductsByCatComponent
   ]
 })
 export class SharedModule { }
