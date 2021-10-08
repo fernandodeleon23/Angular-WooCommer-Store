@@ -1,1 +1,37 @@
-<p>my-address works!</p>
+
+<p class="mb-4">Las siguientes direcciones se utilizarán por defecto en la página de pago.</p>
+
+<p [hidden]="!loading">Cargando datos...</p>
+
+<div class="addresses" *ngIf="customer">
+
+    <div class="address">
+        <h5 class="address-title area-title mb-3">
+            Dirección de facturación
+        </h5>
+
+        <p>
+            <span>{{ customer.billing.first_name+' '+customer.billing.last_name }}</span>
+            <span>{{ customer.billing.company }}</span>
+            <span>{{ customer.billing.address_1 }}</span>
+            <span>{{ customer.billing.address_2 }}</span>
+            <span>{{ customer.billing.city }}</span>
+        </p>
+    </div>
+
+    <div class="address">
+        <h5 class="address-title area-title mb-3">
+            Dirección de envío
+        </h5>
+
+        <p>
+            Fernando De Leon<br>
+            BerryWhale<br>
+            Buena Ventura Freites<br>
+            Distrito Nacional<br>
+            Distrito Nacional<br>
+            51000
+        </p>
+    </div>
+
+</div>

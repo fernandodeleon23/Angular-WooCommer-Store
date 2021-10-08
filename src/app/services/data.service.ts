@@ -25,4 +25,9 @@ export class DataService {
   getRelatedProducts( slug:string ){
     return this._http.get( this.apiUrl+'products/related/'+slug )
   }
+
+  // Customers
+  getCustomer( id:number ){
+    return this._http.get( this.apiUrl+'customers/'+id );
+  }
 }

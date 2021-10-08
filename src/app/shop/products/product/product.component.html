@@ -51,7 +51,7 @@
                 <article *ngFor="let relatedProduct of relatedProducts">
                     <div class="image-area">
                         <a (click)="goToProduct( relatedProduct.slug )">
-                            <div class="tag">Sale</div>
+                            <div class="tag" *ngIf="relatedProduct.price">Disponible</div>
                             <img [src]="relatedProduct.images[0].src" class="img-fluid" alt="">
                         </a>
                         <span class="category mb-2">Flower</span>

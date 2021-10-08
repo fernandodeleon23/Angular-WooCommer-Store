@@ -1,0 +1,7 @@
+.addresses .address{
+    width:50%;
+}
+
+.addresses .address p span{
+    display:block;
+}

@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { AccountComponent } from './account/account.component';
 import { MyAddressComponent } from './account/my-address/my-address.component';
 import { AccountDetailsComponent } from './account/account-details/account-details.component';
+import { ProductFilterComponent } from './product-filter/product-filter.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AccountDetailsComponent } from './account/account-details/account-detai
     CategoriesComponent,
     AccountComponent,
     MyAddressComponent,
-    AccountDetailsComponent
+    AccountDetailsComponent,
+    ProductFilterComponent
   ],
   imports: [
     CommonModule,
