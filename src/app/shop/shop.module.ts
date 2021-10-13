@@ -17,6 +17,7 @@ import { AccountComponent } from './account/account.component';
 import { MyAddressComponent } from './account/my-address/my-address.component';
 import { AccountDetailsComponent } from './account/account-details/account-details.component';
 import { ProductFilterComponent } from './product-filter/product-filter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ProductFilterComponent } from './product-filter/product-filter.componen
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ]
 })
 export class ShopModule { }

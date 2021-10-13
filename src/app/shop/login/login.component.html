@@ -6,14 +6,14 @@
             <h4>Inicia sesión</h4>
         </div>
 
-        <form>
+        <form #f="ngForm" (ngSubmit)="login(f)" ngNativeValidate>
             <div class="form-group">
                 <label for="">Correo</label>
-                <input type="text" class="form-control">
+                <input type="text" name="username" [(ngModel)]="user.username" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="">Contreseña</label>
-                <input type="password" class="form-control">
+                <input type="password" name="password" [(ngModel)]="user.password" class="form-control" required>
             </div>
 
             <button class="btn btn-primary w-100 text-uppercase">Enviar</button>

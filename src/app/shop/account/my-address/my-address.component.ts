@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class MyAddressComponent implements OnInit {
   loading: boolean = true;
 
   constructor(
-    private _dataService: DataService
+    private _dataService: DataService,
+    private _authService: AuthService
   ){ }
 
   ngOnInit(): void {
@@ -20,7 +22,10 @@ export class MyAddressComponent implements OnInit {
   }
 
   loadCustomer(){
-    this._dataService.getCustomer( 1069 ).subscribe(data=>{
+
+    const user = this._authService.getUserID()    
+    
+    this._dataService.getCustomer( user.user_id ).subscribe(data=>{
       this.customer = data
       this.loading = false;
     })
