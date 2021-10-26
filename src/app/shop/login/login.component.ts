@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Form, NgForm } from '@angular/forms'
+import { Router } from '@angular/router';
 import { UserModel } from 'src/app/models/user.model';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
   error:boolean = false;
 
   constructor(
-    private _authService: AuthService
+    private _authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -27,8 +29,7 @@ export class LoginComponent implements OnInit {
     }
 
     this._authService.login( this.user.username, this.user.password ).subscribe(data=>{
-      this._authService.setUser( data )
-      f.reset()
+      this.router.navigateByUrl('/cuenta')
     },error=>{
       this.error = true
     })

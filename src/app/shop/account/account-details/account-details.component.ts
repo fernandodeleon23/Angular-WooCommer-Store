@@ -23,7 +23,7 @@ export class AccountDetailsComponent implements OnInit {
 
   loadCustomer(){
 
-    const user = this._authService.getUserID()    
+    const user = this._authService.getUser()    
     
     this._dataService.getCustomer( user.user_id ).subscribe(data=>{
       this.customer = data

@@ -32,9 +32,9 @@
 
                 <div class="product-description mb-4" [innerHTML]="product[0].short_description"></div>
 
-                <div class="product-options" *ngIf="product[0].price">
-                    <input type="number" min="1" max="10" value="1" required class="form-control quantity">
-                    <button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i> Agregar</button>
+                <div class="product-options" *ngIf="product[0].price && product[0].stock_status == 'instock'">
+                    <!-- <input type="number" min="1" max="10" value="1" required class="form-control quantity"> -->
+                    <button (click)="addToCart()" class="btn add-to-cart"><i class="fas fa-shopping-cart"></i> <span [hidden]="addedToCart">Agregar</span> <span [hidden]="!addedToCart">Agregado</span></button>
                 </div>
 
             </div>

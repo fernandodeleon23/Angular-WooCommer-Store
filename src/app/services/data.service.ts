@@ -15,15 +15,15 @@ export class DataService {
   }
 
   getProduct( slug:string ){
-    return this._http.get( this.apiUrl+'products/'+slug)
+    return this._http.get( this.apiUrl+'product/'+slug)
   }
 
   getProductsByCat( slug:string ){
-    return this._http.get( this.apiUrl+'products/cat/'+slug )
+    return this._http.get( this.apiUrl+'products/category-slug/'+slug )
   }
 
-  getRelatedProducts( slug:string ){
-    return this._http.get( this.apiUrl+'products/related/'+slug )
+  getRelatedProducts( id:number ){
+    return this._http.get( this.apiUrl+'products/related/'+id )
   }
 
   // Customers

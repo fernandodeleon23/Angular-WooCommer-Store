@@ -4,10 +4,10 @@
 
         <div class="section-title-area">
             <h1 class="section-title mb-3">Carrito</h1>
-            <div class="description">Hay 3 productos en tu carrito</div>
+            <div class="description">Hay {{ cart.length }} productos en tu carrito</div>
         </div>
 
-        <table class="cart-list table mt-4">
+        <table class="cart-list table mt-4" *ngIf="cart.length > 0">
             <thead>
                 <th>
                     <div class="th-container">
@@ -31,30 +31,35 @@
                 </th>
             </thead>
             <tbody>
-                <tr>
+                <tr *ngFor="let cartItem of cart">
                     <td>
                         <div class="td-container">
-                            <img src="assets/images/product-1.jpg" class="product-image" alt="">
-                            <h5><a href="">Field Roast Chao Cheese Creamy Original</a></h5>
+                            <img [src]="cartItem.image" class="product-image" alt="">
+                            <h5><a [routerLink]="['/product', cartItem.slug ]">{{ cartItem.name }}</a></h5>
                         </div>
                     </td>
                     <td>
                         <div class="td-container">
-                            $2.51
+                            {{ cartItem.price | currency }}
                         </div>
                     </td>
                     <td>
                         <div class="td-container">
-                            <input type="number" min="1" max="10" class="form-control">
+                            <input type="number" min="1" max="10" [value]="cartItem.quantity" class="form-control">
                         </div>
                     </td>
                     <td>
                         <div class="td-container">
-                            $2.51
+                            {{ cartItem.price | currency }}
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
+
+        <div class="go-checkout-area" style="text-align:right;">
+            <button (click)="emptyCart()" class="btn btn-danger">Vaciar carrito</button>
+            <button class="btn btn-primary checkout">Ir al checkout</button>
+        </div>
     </div>
 </section>

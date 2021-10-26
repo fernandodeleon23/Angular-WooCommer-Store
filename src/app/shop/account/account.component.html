@@ -8,7 +8,7 @@
                     <li routerLinkActive="active"><a routerLink="/cuenta/ordenes"><i class="fas fa-list"></i> Órdenes</a></li>
                     <li routerLinkActive="active"><a routerLink="/cuenta/address"><i class="fas fa-address-card"></i> Mis direcciones</a></li>
                     <li routerLinkActive="active"><a routerLink="/cuenta/account-details"><i class="fas fa-user"></i> Detalles de la cuenta</a></li>
-                    <li routerLinkActive="active"><a href="#"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+                    <li><a class="cursor-pointer" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
                 </ul>
             </div>
             <div class="panel-content">

@@ -25,6 +25,10 @@ a, a:hover, a:focus{
     background-color:#34a16f;
 }
 
+.cursor-pointer{
+    cursor:pointer;
+}
+
 .form-group{
     margin-bottom:20px;
 }
@@ -101,7 +105,7 @@ h1, h2, h3, h4, h5, h6, .section-title-area, .form-group label{
     height:fit-content;
 }
 .products-loop.layout article{
-    flex:0.1 0 24.24%;
+    flex:0.1 0 19.199%;
 }
 .products-loop.layout article a{
     cursor:pointer;
@@ -192,7 +196,7 @@ h1, h2, h3, h4, h5, h6, .section-title-area, .form-group label{
 }
 
 @media screen and (min-width:1100px){
-    .products-loop article:nth-of-type(4n+4){
+    .products-loop article:nth-of-type(5n+5){
         margin-right:0;
     }
 }

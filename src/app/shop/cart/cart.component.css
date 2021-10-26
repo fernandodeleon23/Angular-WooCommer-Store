@@ -1,8 +1,16 @@
 
 .cart-list img.product-image{
     width:100px;
+    margin-right:10px;
 }
 .cart-list thead .th-container, .cart-list tbody .td-container{
     display:flex;
     align-items:center;
+}
+.cart-list tbody .td-container h5{
+    margin-bottom:0;
+}
+
+button.checkout{
+    margin-left:5px;
 }
